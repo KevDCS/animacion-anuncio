@@ -24,7 +24,9 @@ body {
 }
 
 .product_logo {
-	width: 20%;
+	width: 18%;
+	animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation-delay: 1s;
 }
 
 .product_text {
@@ -36,6 +38,7 @@ body {
 .product_name {
 	font-size: 3rem;
 	font-weight: bold;
+	animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .product_slogan {
@@ -45,4 +48,57 @@ body {
 
 .product_image {
 	width: 500px;
+	animation: swirl-in-fwd 0.8s ease-out both;
+	animation-delay: 2s;
+}
+
+/* ANIMACIONES PARA LOS ELEMENTOS */
+
+/* ANIMACIÓN PARA EL TITULO */
+@keyframes slide-in-top {
+	0% {
+		-webkit-transform: translateY(-1000px);
+		transform: translateY(-1000px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* ANIMACIÓN PARA EL LOGO */
+
+@keyframes slide-in-elliptic-top-fwd {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+
+/* ANIMACION PARA LA IMAGEN */
+
+@keyframes swirl-in-fwd {
+	0% {
+		-webkit-transform: rotate(-540deg) scale(0);
+		transform: rotate(-540deg) scale(0);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotate(0) scale(1);
+		transform: rotate(0) scale(1);
+		opacity: 1;
+	}
 }
