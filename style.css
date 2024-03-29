@@ -12,26 +12,36 @@ body {
 .main_section {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.product_header {
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 600px;
-	height: 600px;
+}
+
+.product_logo {
+	width: 20%;
+}
+
+.product_text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .product_name {
-	text-align: center;
 	font-size: 3rem;
 	font-weight: bold;
-	text-wrap: balance;
 }
 
 .product_slogan {
-	text-align: center;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	text-wrap: pretty;
 }
 
 .product_image {
-	width: 80%;
-	object-fit: cover;
+	width: 500px;
 }
